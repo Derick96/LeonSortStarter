@@ -1,19 +1,26 @@
 package edu.ujcv.progra1;
 
+import static edu.ujcv.progra1.QuickSort.qSort;
+
 public class Main {
 
     public static void main(String[] args) {
 	// write your code here
 
-        int[] elementos = {3,2,4,5,6,7,9,9,10,3,5};
-        MergeSort m = new MergeSort();
-        elementos = m.mergeSort(elementos);
+        int arr[] = {10,7,8,9,1,5};
+        int n = arr.length;
 
-        for (int i = 0; i < elementos.length; i++) {
-            System.out.println(elementos[i]);
+        QuickSort ob = new QuickSort();
+        ob.qSort(arr,0,n-1);
+
+
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
         }
 
-        elementos = new int[]{3,2,4,5,6,7,9,9,10,3,5};
-        System.out.println("\n\ntarda "+ m.sort(elementos)+ " milisegundos");
+
+        System.out.println("\n\ntarda "+ ob.sort(arr)+ " milisegundos");
+
     }
 }

@@ -1,7 +1,18 @@
 package edu.ujcv.progra1;
 import java.util.*;
 
-    public class QuickSort {
+    public class QuickSort implements SortTester{
+        @Override
+            public long sort(int[] array) {
+            long start = System.currentTimeMillis();
+            int n = array.length;
+            qSort(array,0,n-1);
+
+
+            long end = System.currentTimeMillis();
+
+            return end - start;
+        }
         static int partition(int arr[], int low, int high)
         {
             int pivot = arr[high];
@@ -31,6 +42,7 @@ import java.util.*;
                 int pi = partition(arr, low, high);
                 qSort(arr, low, pi - 1);
                 qSort(arr, pi + 1, high);
+
             }
         }
     }
