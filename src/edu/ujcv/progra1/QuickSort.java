@@ -26,6 +26,13 @@ import java.util.*;
 
             return i + 1;
         }
+        static void qSort(int arr[], int low, int high){
+            if (low < high) {
+                int pi = partition(arr, low, high);
+                qSort(arr, low, pi - 1);
+                qSort(arr, pi + 1, high);
+            }
+        }
     }
-    
+
 
