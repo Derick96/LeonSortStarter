@@ -1,32 +1,21 @@
+package edu.ujcv.progra1;
 
 import edu.ujcv.progra1.SortTester;
 
-import java.util.Arrays;
-import java.util.Scanner;
-public abstract class HeapSort implements SortTester {
-    private static Scanner sc;
-
-    public static void main(String args[]) {
-
-        sc = new Scanner(System.in);
-
-        System.out.println("Ingrese la cantidad de elementos que desea ordenar");
-        int n = sc.nextInt();
 
 
-        System.out.println("Ingrese los numeros a ordenar: ");
-        int arr[] = new int[n];
-        for (int i = 0; i < n; i++)
-            arr[i] = sc.nextInt();
+public  class HeapSort implements SortTester {
 
-        System.out.println("El arreglo sin ordenar es: ");
-        System.out.println(Arrays.toString(arr));
+    @Override
+    public long sort(int[] array) {
+        long start = System.currentTimeMillis();
+        heap(array);
 
-        heap(arr);
+        long end = System.currentTimeMillis();
 
-        System.out.println("El arreglo ordenado es: ");
-        System.out.println(Arrays.toString(arr));
+        return end - start;
     }
+
 
     static void heapify(int a[], int n, int i) {
         int max, child;
