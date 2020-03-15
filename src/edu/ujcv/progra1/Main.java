@@ -7,20 +7,20 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
-        int arr[] = {7,4,9,23,66,1,10};
+        int array[] = {7,4,9,23,66,1,10};
 
 
         BubleSort ob = new BubleSort();
-        ob.bubbleSort(arr);
+        ob.bubbleSort(array);
 
 
 
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
         }
 
 
-        System.out.println("\n\ntarda "+ ob.sort(arr)+ " milisegundos");
+        System.out.println("\n\ntarda "+ ob.sort(array)+ " milisegundos");
 
     }
 }

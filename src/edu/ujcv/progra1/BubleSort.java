@@ -11,17 +11,17 @@ public class BubleSort implements SortTester {
         return end - start;
     }
 
-    public static int[] bubbleSort(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            for (int c = 0; c < arr.length; c++) {
-                if (arr[i] < arr[c]) {
-                    int temp = arr[i];
-                    arr[i] = arr[c];
-                    arr[c] = temp;
+    public static int[] bubbleSort(int[] array) {
+        for (int k = 0; k < array.length; k++) {
+            for (int j = 0; j < array.length; j++) {
+                if (array[k] < array[j]) {
+                    int temp = array[k];
+                    array[k] = array[j];
+                    array[j] = temp;
                 }
             }
         }
-        return arr;
+        return array;
     }
 
 }
