@@ -7,11 +7,11 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
-        int arr[] = {10,7,8,9,1,5};
-        int n = arr.length;
+        int arr[] = {3,2,7,5,4,1,6};
 
-        QuickSort ob = new QuickSort();
-        ob.qSort(arr,0,n-1);
+
+        HeapSort ob = new HeapSort();
+        ob.heap(arr);
 
 
 

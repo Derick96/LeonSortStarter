@@ -18,15 +18,15 @@ public  class HeapSort implements SortTester {
 
 
     static void heapify(int a[], int n, int i) {
-        int max, child;
-        child = 2 * i + 1;
+        int max, min;
+        min = 2 * i + 1;
         max = i;
-        if (child < n)
-            if (a[child] > a[max])
-                max = child;
-        if (child + 1 < n)
-            if (a[child + 1] > a[max])
-                max = child + 1;
+        if (min < n)
+            if (a[min] > a[max])
+                max = min;
+        if (min + 1 < n)
+            if (a[min + 1] > a[max])
+                max = min + 1;
         if (max != i) {
             int temp = a[i];
             a[i] = a[max];
