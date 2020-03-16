@@ -13,11 +13,11 @@ import java.util.*;
 
             return end - start;
         }
-        static int partition(int arr[], int low, int high)
+        static int partition(int arr[], int bajo, int alto)
         {
-            int pivot = arr[high];
-            int i = (low - 1); // índice de elemento más pequeño
-            for (int j = low; j <= high - 1; j++) {
+            int pivot = arr[alto];
+            int i = (bajo - 1); // índice de elemento más pequeño
+            for (int j = bajo; j <= alto - 1; j++) {
                 // si el elemento es menor que o
                 // igual al pivote
                 if (arr[j] <= pivot) {
@@ -32,16 +32,16 @@ import java.util.*;
 
             // intercambiar arr [i + 1] y arr [alto] (o pivote)
             int temp = arr[i + 1];
-            arr[i + 1] = arr[high];
-            arr[high] = temp;
+            arr[i + 1] = arr[alto];
+            arr[alto] = temp;
 
             return i + 1;
         }
-        static void qSort(int arr[], int low, int high){
-            if (low < high) {
-                int pi = partition(arr, low, high);
-                qSort(arr, low, pi - 1);
-                qSort(arr, pi + 1, high);
+        static void qSort(int arr[], int bajo, int alto){
+            if (bajo < alto) {
+                int pi = partition(arr, bajo, alto);
+                qSort(arr, bajo, pi - 1);
+                qSort(arr, pi + 1, alto);
 
             }
         }
