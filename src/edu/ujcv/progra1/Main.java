@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
-        int array[] = {10,5,3,5,8,1,2};
+        int array[] = {3,6,7,12,1,9};
 
 
 
@@ -22,7 +22,7 @@ public class Main {
         }
 
 
-        System.out.println("\n\ntarda "+ ob.sort(array)+ " nanosegundos");
+        System.out.println("\n\n algortimo tarda "+ ob.sort(array)+ " nanosegundos");
 
     }
 }
