@@ -29,8 +29,24 @@ public class MergeSort  implements SortTester{
         return merge(mergeSort(abajo), mergeSort(arriba));
     }
 
-    public static int[] merge(int[] inf, int[] sup ){
-        return new int[5];
+    public static int[] merge(int[] a, int[] b ){
+
+        int[] retval = new int[a.length + b.length];
+        int i = 0, j = 0, k = 0;
+        while (j < a.length && k < b.length) {
+            if (a[j] < b[k]) {
+                retval[i++] = a[j++];
+            } else {
+                retval[i++] = b[k++];
+            }
+        }
+        while (j < a.length) {
+            retval[i++] = a[j++];
+        }
+        while (k < b.length) {
+            retval[i++] = b[k++];
+        }
+        return retval;
     }
 
 
