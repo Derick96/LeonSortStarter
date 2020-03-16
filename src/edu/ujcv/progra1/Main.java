@@ -1,5 +1,6 @@
 package edu.ujcv.progra1;
 
+import static edu.ujcv.progra1.HeapSort.heap;
 import static edu.ujcv.progra1.QuickSort.qSort;
 
 public class Main {
@@ -7,12 +8,12 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
-        int array[] = {7,4,9,23,66,1,10};
-        int n = array.length;
+        int array[] = {10,5,3,5,8,1,2};
 
 
-        QuickSort ob = new QuickSort();
-        ob.qSort(array,0,n-1);
+
+        HeapSort ob = new HeapSort();
+        ob.heap(array);
 
 
 
