@@ -8,10 +8,11 @@ public class Main {
 	// write your code here
 
         int array[] = {7,4,9,23,66,1,10};
+        int n = array.length;
 
 
-        BubleSort ob = new BubleSort();
-        ob.bubbleSort(array);
+        QuickSort ob = new QuickSort();
+        ob.qSort(array,0,n-1);
 
 
 
@@ -20,7 +21,7 @@ public class Main {
         }
 
 
-        System.out.println("\n\ntarda "+ ob.sort(array)+ " milisegundos");
+        System.out.println("\n\ntarda "+ ob.sort(array)+ " nanosegundos");
 
     }
 }
