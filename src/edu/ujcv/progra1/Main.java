@@ -8,12 +8,13 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
-        int array[] = {3,6,7,12,1,9};
+        int array[] = {1,3,6,4,9,10,17,7};
 
 
 
-        HeapSort ob = new HeapSort();
-        ob.heap(array);
+        MergeSort ob = new MergeSort();
+        int [] tmp = new int[array.length];
+        ob.mergeSort(array, tmp, 0, array.length-1);
 
 
 

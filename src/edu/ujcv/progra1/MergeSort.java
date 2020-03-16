@@ -4,50 +4,42 @@ public class MergeSort  implements SortTester{
     @Override
     public long sort(int[] array) {
         long start = System.nanoTime();
-        mergeSort(array);
+        int [] tmp = new int[array.length];
+        mergeSort(array, tmp, 0, array.length-1);
+
 
         long end = System.nanoTime();
 
         return end - start;
     }
 
-    public static int[] mergeSort(int[] arr){
-        if (arr.length <= 1) {
-            return arr;
-        }
-        int medio = arr.length / 2;
 
-        int[] abajo = new int[medio];
-        int[] arriba = new int[arr.length - medio];
-        for (int a = 0; a < medio; a++) {
-            abajo[a] = arr[a];
+     static void mergeSort(int[] a, int[] tmp,int left, int right){
+        if(left < right){
+            int centre = (left + right)/2;
+            mergeSort(a, tmp, left, centre);
+            mergeSort(a, tmp, centre+1, right);
+            merge(a, tmp, left, centre+1, right);
         }
-
-        for (int a = 0; a < arriba.length; a++) {
-            arriba[a] = arr[a + abajo.length];
-        }
-        return merge(mergeSort(abajo), mergeSort(arriba));
     }
+     static void merge(int [] a, int [] tmp, int left, int right, int rend){
+        int lend = right-1;
+        int tpos = left; int lbeg = left;
 
-    public static int[] merge(int[] a, int[] b ){
-
-        int[] retval = new int[a.length + b.length];
-        int i = 0, j = 0, k = 0;
-        while (j < a.length && k < b.length) {
-            if (a[j] < b[k]) {
-                retval[i++] = a[j++];
-            } else {
-                retval[i++] = b[k++];
+        while(left <= lend && right <= rend){
+            if(a[left] < a[right]){
+                tmp[tpos++] = a[left++];
+            }else{
+                tmp[tpos++] = a[right++];
             }
         }
-        while (j < a.length) {
-            retval[i++] = a[j++];
+        while(left <= lend){
+            tmp[tpos++] = a[left++];
         }
-        while (k < b.length) {
-            retval[i++] = b[k++];
+        while(right <= rend){
+            tmp[tpos++] = a[right++];
         }
-        return retval;
-    }
-
-
+        for(tpos = lbeg; tpos <= rend; tpos++){
+            a[tpos] = tmp[tpos];
+        }}
 }
