@@ -4,12 +4,12 @@ import java.util.*;
     public class QuickSort implements SortTester{
         @Override
             public long sort(int[] array) {
-            long start = System.nanoTime();
+            long start = System.currentTimeMillis();
             int n = array.length;
             qSort(array,0,n-1);
 
 
-            long end = System.nanoTime();
+            long end = System.currentTimeMillis();
 
             return end - start;
         }
