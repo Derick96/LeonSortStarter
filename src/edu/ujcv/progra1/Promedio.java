@@ -2,18 +2,18 @@ package edu.ujcv.progra1;
 import java.util.Random;
 public class Promedio {
     public static void main(String[] args){
-        int [] arr1 = new int[1000];
-        int [] arr2 = new int[1000];
-        int [] arr3 = new int[1000];
-        int [] arr4 = new int[1000];
+        int [] arr1 = new int[10000];
+        int [] arr2 = new int[10000];
+        int [] arr3 = new int[10000];
+        int [] arr4 = new int[10000];
 
         Random random = new Random();
 
         for (int i = 0; i < arr1.length; i++) {
-            arr1[i] = Math.abs(random.nextInt(1000));
-            arr2[i] = Math.abs(random.nextInt(1000));
-            arr3[i] = Math.abs(random.nextInt(1000));
-            arr4[i] = Math.abs(random.nextInt(1000));
+            arr1[i] = Math.abs(random.nextInt(10000));
+            arr2[i] = Math.abs(random.nextInt(10000));
+            arr3[i] = Math.abs(random.nextInt(10000));
+            arr4[i] = Math.abs(random.nextInt(10000));
 
 
         }

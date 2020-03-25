@@ -8,10 +8,10 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
-        int array[] = new int [100000];
+        int array[] = new int [10000];
         Random R = new Random();
         for (int i= 0; i < array.length; i++) {
-            array[i] = Math.abs(R.nextInt(100000));
+            array[i] = Math.abs(R.nextInt(10000));
         }
 
 

@@ -8,10 +8,10 @@ public  class HeapSort implements SortTester {
 
     @Override
     public long sort(int[] array) {
-        long start = System.nanoTime();
+        long start = System.currentTimeMillis();
         heap(array);
 
-        long end = System.nanoTime();
+        long end = System.currentTimeMillis();
 
         return end - start;
     }

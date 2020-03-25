@@ -3,12 +3,12 @@ package edu.ujcv.progra1;
 public class MergeSort  implements SortTester{
     @Override
     public long sort(int[] array) {
-        long start = System.nanoTime();
+        long start = System.currentTimeMillis();
         int [] tmp = new int[array.length];
         mergeSort(array, tmp, 0, array.length-1);
 
 
-        long end = System.nanoTime();
+        long end = System.currentTimeMillis();
 
         return end - start;
     }
